@@ -1,0 +1,129 @@
+@use "mixins.scss";
+@use "variables.scss";
+
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+body {
+    background-color: #fff5e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+h1 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #05408e;
+    background-color: #fdffff;
+    padding: 10px 40px;
+    border: 1px solid #05408e;
+    border-radius: 30px;
+    font-size: 1.5rem;
+}
+
+p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #05408e;
+    margin: 25px;
+    text-align: center;
+}
+
+a {
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+    padding: 8px 18px;
+    border-radius: 30px;
+    color: #05408e;  
+    background-color: #f3eadb;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    margin-top: 30px;
+    display: none;
+}
+
+
+#numberOfRoundsForm{
+    margin-bottom: 20px;
+
+    input[type="radio"]{
+        visibility: hidden;
+    }
+
+    label {
+        vertical-align: middle;
+        text-align: center;
+        cursor: pointer;
+        padding: 8px 18px;
+        border-radius: 100%;
+        color: #05408e;  
+        background-color: #f3eadb;
+        font-size: 1.5rem;  
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    input[type="number"] {
+        vertical-align: middle;
+        text-align: center;
+        padding: 8px 18px;
+        border-radius: 100%;
+        color: #05408e;  
+        background-color: #f3eadb;
+        font-size: auto;  
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        border: none;
+        width: 50px;
+        height: 45px;
+        margin-left: 15px;
+    }
+
+    input[type="radio"]:checked + label, input[type="radio"]:hover + label  {
+        background-color: #05408e;
+        color: #f3eadb;
+    }
+}
+
+#numberGuessed {
+    background-image: url("../img/number-guessing-game-c-project-Thumbnail.jpg");
+    height: 250px;
+    width: 450px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: 37px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 19px;
+
+    input {
+        font-size: 2rem;
+        width: 70px;
+        height: 90px;
+        margin-top: 50px;
+        background-color: #e5f3ff00;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #05408e;
+        border: none;
+        text-align: center;
+    }
+
+    input:active, input:focus, input:hover {
+        outline: none;
+    }
+
+    input[type="submit"] {
+        display: none;
+    }
+}
